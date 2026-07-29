@@ -1,0 +1,18 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#F3E9DA"/>
+  <circle cx="200" cy="200" r="170" fill="#DFE6D2"/>
+  <ellipse cx="200" cy="230" rx="110" ry="130" fill="#E9D7C3"/>
+  <path d="M120 190 Q200 140 280 190 L280 260 Q200 330 120 260 Z" fill="#EBD9C2"/>
+  <circle cx="160" cy="210" r="8" fill="#6F4527"/>
+  <circle cx="240" cy="210" r="8" fill="#6F4527"/>
+  <path d="M188 236 Q200 242 212 236" stroke="#8A5A36" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M160 278 Q200 296 240 278" stroke="#B98D5F" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- shine highlights for oiliness -->
+  <ellipse cx="200" cy="205" rx="26" ry="40" fill="#FDFBF8" opacity="0.75"/>
+  <ellipse cx="155" cy="255" rx="14" ry="20" fill="#FDFBF8" opacity="0.6"/>
+  <ellipse cx="245" cy="255" rx="14" ry="20" fill="#FDFBF8" opacity="0.6"/>
+  <circle cx="200" cy="245" r="3" fill="#7C8F5E"/>
+  <circle cx="188" cy="255" r="3" fill="#7C8F5E"/>
+  <circle cx="212" cy="255" r="3" fill="#7C8F5E"/>
+  <text x="200" y="385" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#55361F">Oily Skin</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#F3E9DA"/>
+  <circle cx="200" cy="200" r="170" fill="#F1E4D3"/>
+  <ellipse cx="200" cy="230" rx="110" ry="130" fill="#E6D2B8"/>
+  <path d="M120 190 Q200 140 280 190 L280 260 Q200 330 120 260 Z" fill="#E9D7C3"/>
+  <circle cx="160" cy="210" r="8" fill="#6F4527"/>
+  <circle cx="240" cy="210" r="8" fill="#6F4527"/>
+  <path d="M182 237 Q200 244 218 237" stroke="#8A5A36" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M155 278 Q200 292 245 278" stroke="#B98D5F" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- flaky dry texture lines -->
+  <g stroke="#C9A679" stroke-width="2.5" stroke-linecap="round" opacity="0.8">
+    <path d="M150 170 l10 -8"/>
+    <path d="M170 160 l8 -10"/>
+    <path d="M230 160 l8 -10"/>
+    <path d="M250 170 l10 -8"/>
+    <path d="M140 290 l-10 6"/>
+    <path d="M260 290 l10 6"/>
+    <path d="M200 175 l0 -12"/>
+  </g>
+  <text x="200" y="385" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#55361F">Dry Skin</text>
+</svg>
