@@ -1,0 +1,101 @@
+/* App shell — mobile-first single column, centered on wider viewports.
+   The original prototype rendered inside a fixed iOS device frame for
+   preview purposes only; the real app is a responsive PWA instead. */
+
+.app-shell {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  background: var(--color-neutral-200);
+}
+
+.app-frame {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100dvh;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.app-scroll {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.2s ease;
+}
+
+.screen-pad {
+  padding: 0 20px 24px;
+}
+.screen-pad-tabbed {
+  padding: 0 20px 96px;
+}
+
+.tab-bar {
+  display: flex;
+  border-top: 1px solid var(--color-divider);
+  background: var(--color-bg);
+  padding: 10px 6px calc(14px + env(safe-area-inset-bottom, 0px));
+  position: sticky;
+  bottom: 0;
+}
+.tab-bar-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px 2px;
+  font-family: inherit;
+}
+.tab-bar-item span {
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.back-link {
+  font-size: 12.5px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 0 12px;
+  white-space: nowrap;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.muted { color: color-mix(in srgb, var(--color-text) 60%, transparent); }
+.muted-70 { color: color-mix(in srgb, var(--color-text) 68%, transparent); }
+
+.image-slot {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-neutral-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+  font-size: 11.5px;
+  text-align: center;
+  padding: 8px;
+}
+.image-slot img {
+  width: 100%;
+  height: 100%;
+}
+.image-slot input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
