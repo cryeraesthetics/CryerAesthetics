@@ -1,0 +1,15 @@
+{
+  "name": "Cryer Aesthetics",
+  "short_name": "Cryer Aesthetics",
+  "description": "Skin consultations, your skin guide, and your skin profile in one place.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5ead8",
+  "theme_color": "#f5ead8",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/assets/cryer-aesthetics-mark.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/cryer-aesthetics-mark.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
