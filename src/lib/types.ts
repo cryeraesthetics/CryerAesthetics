@@ -7,6 +7,7 @@ export interface SkinType {
   id: string;
   name: string;
   tagline: string;
+  image: string;
   am: string[];
   pm: string[];
   dos: string[];

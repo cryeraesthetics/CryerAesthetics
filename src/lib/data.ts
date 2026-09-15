@@ -14,10 +14,15 @@ import type {
   Tip,
   Tutorial,
 } from './types';
+import skinNormal from '../assets/skin-normal.png';
+import skinDry from '../assets/skin-dry.png';
+import skinOily from '../assets/skin-oily.png';
+import skinCombination from '../assets/skin-combination.png';
+import skinSensitive from '../assets/skin-sensitive.png';
 
 export const SKIN_TYPES: SkinType[] = [
   {
-    id: 'normal', name: 'Normal', tagline: 'Balanced and low-maintenance',
+    id: 'normal', name: 'Normal', tagline: 'Balanced and low-maintenance', image: skinNormal,
     am: ['Gentle cleanser', 'Antioxidant serum', 'Lightweight moisturizer', 'Mineral SPF 50'],
     pm: ['Gentle cleanser', 'Hydrating serum', 'Night moisturizer'],
     dos: ['Cleanse morning & night', 'Wear SPF daily', 'Exfoliate 1-2x a week', 'Keep routine consistent'],
@@ -30,7 +35,7 @@ export const SKIN_TYPES: SkinType[] = [
     ],
   },
   {
-    id: 'dry', name: 'Dry', tagline: 'Tight, flaky or rough patches',
+    id: 'dry', name: 'Dry', tagline: 'Tight, flaky or rough patches', image: skinDry,
     am: ['Cream cleanser', 'Hyaluronic acid serum', 'Ceramide moisturizer', 'Mineral SPF 50'],
     pm: ['Cream cleanser', 'Facial oil', 'Rich night cream'],
     dos: ['Apply moisturizer on damp skin', 'Use a humidifier in dry months', 'Choose cream over gel cleansers', 'Layer a facial oil at night'],
@@ -43,7 +48,7 @@ export const SKIN_TYPES: SkinType[] = [
     ],
   },
   {
-    id: 'oily', name: 'Oily', tagline: 'Shiny, prone to breakouts',
+    id: 'oily', name: 'Oily', tagline: 'Shiny, prone to breakouts', image: skinOily,
     am: ['Foaming cleanser', 'Niacinamide serum', 'Oil-free gel moisturizer', 'Mineral SPF 50'],
     pm: ['Foaming cleanser', 'Salicylic acid treatment', 'Oil-free moisturizer'],
     dos: ['Cleanse twice daily', 'Use oil-free, non-comedogenic products', 'Introduce salicylic acid gradually', 'Blot instead of over-washing midday'],
@@ -56,7 +61,7 @@ export const SKIN_TYPES: SkinType[] = [
     ],
   },
   {
-    id: 'combination', name: 'Combination', tagline: 'Oily T-zone, dry cheeks',
+    id: 'combination', name: 'Combination', tagline: 'Oily T-zone, dry cheeks', image: skinCombination,
     am: ['Balancing cleanser', 'Niacinamide serum', 'Lightweight moisturizer', 'Mineral SPF 50'],
     pm: ['Balancing cleanser', 'Targeted treatment (T-zone)', 'Cream moisturizer (cheeks)'],
     dos: ['Multi-mask by zone if needed', 'Use a balancing toner', 'Moisturize the whole face', 'Adjust routine seasonally'],
@@ -69,7 +74,7 @@ export const SKIN_TYPES: SkinType[] = [
     ],
   },
   {
-    id: 'sensitive', name: 'Sensitive', tagline: 'Reacts easily, redness-prone',
+    id: 'sensitive', name: 'Sensitive', tagline: 'Reacts easily, redness-prone', image: skinSensitive,
     am: ['Fragrance-free cleanser', 'Soothing serum', 'Ceramide moisturizer', 'Mineral SPF 50'],
     pm: ['Fragrance-free cleanser', 'Calming serum', 'Barrier repair cream'],
     dos: ['Patch-test everything new', 'Choose fragrance-free formulas', 'Keep routines simple', 'Use mineral, not chemical, SPF'],
