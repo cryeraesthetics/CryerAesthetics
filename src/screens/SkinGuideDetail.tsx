@@ -19,7 +19,7 @@ export default function SkinGuideDetail() {
   return (
     <div className="screen-pad-tabbed">
       <BackLink to="/guide" label="Skin Guide" />
-      <ImagePlaceholder label={`${skinType.name} skin`} radius={16} style={{ width: '100%', height: 150 }} />
+      <ImagePlaceholder label={`${skinType.name} skin`} src={skinType.image} fit="contain" radius={16} style={{ width: '100%', height: 150 }} />
       <h2 style={{ fontSize: 22, margin: '14px 0 2px' }}>{skinType.name} Skin</h2>
       <p className="muted" style={{ fontSize: 13, margin: '0 0 16px' }}>{skinType.tagline}</p>
 
