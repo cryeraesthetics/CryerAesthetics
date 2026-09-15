@@ -54,6 +54,7 @@ interface MemberDataValue {
   renamePhotoProduct: (id: string, name: string) => void;
   removePhotoProduct: (id: string) => void;
   activateSubscription: (plan: 'monthly' | 'annual') => Promise<void>;
+  refreshSubscription: () => Promise<'monthly' | 'annual' | null>;
   diary: DiaryEntry[];
   addDiaryEntry: (entry: { note: string; symptoms: DiaryEntry['symptoms']; photoUrl: string | null }) => Promise<void>;
   updateDiaryEntry: (id: string, patch: Partial<Pick<DiaryEntry, 'date' | 'note' | 'symptoms'>>) => void;
@@ -261,6 +262,14 @@ export function MemberDataProvider({ children }: { children: ReactNode }) {
     }
   }, [user]);
 
+  const refreshSubscription = useCallback(async () => {
+    if (!user || !supabaseConfigured) return subscriptionPlan;
+    const { data } = await supabase.from('subscriptions').select('*').eq('user_id', user.id).maybeSingle();
+    const plan = data?.status === 'active' ? (data.plan as 'monthly' | 'annual') : null;
+    setSubscriptionPlan(plan);
+    return plan;
+  }, [user, subscriptionPlan]);
+
   const addDiaryEntry = useCallback(async (entry: { note: string; symptoms: DiaryEntry['symptoms']; photoUrl: string | null }) => {
     const date = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     if (user && supabaseConfigured) {
@@ -305,12 +314,12 @@ export function MemberDataProvider({ children }: { children: ReactNode }) {
     setProfileFields, toggleConcern, addCustomConcern, removeCustomConcern,
     shelfPresetIds, toggleShelfPreset, customProducts, addCustomProduct, removeCustomProduct,
     photoItems, addPhotoProduct, renamePhotoProduct, removePhotoProduct,
-    activateSubscription, diary, addDiaryEntry, updateDiaryEntry, deleteDiaryEntry, uploadUserMedia,
+    activateSubscription, refreshSubscription, diary, addDiaryEntry, updateDiaryEntry, deleteDiaryEntry, uploadUserMedia,
     locationState, requestLocation,
   }), [ready, profile, subscriptionPlan, isMember, isPro, previewAsMember, setProfileFields, toggleConcern,
     addCustomConcern, removeCustomConcern, shelfPresetIds, toggleShelfPreset, customProducts, addCustomProduct,
     removeCustomProduct, photoItems, addPhotoProduct, renamePhotoProduct, removePhotoProduct,
-    activateSubscription, diary, addDiaryEntry, updateDiaryEntry, deleteDiaryEntry, uploadUserMedia,
+    activateSubscription, refreshSubscription, diary, addDiaryEntry, updateDiaryEntry, deleteDiaryEntry, uploadUserMedia,
     locationState, requestLocation]);
 
   return <MemberDataContext.Provider value={value}>{children}</MemberDataContext.Provider>;
